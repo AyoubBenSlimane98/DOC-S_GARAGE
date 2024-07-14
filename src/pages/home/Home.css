@@ -1,0 +1,52 @@
+.section-home {
+  background-image: url('../../assets/portrait-of-a-man.webp');
+  background-position: center;
+  background-origin: center;
+  background-size: cover;
+}
+.section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.drop-white {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+.section-video {
+  background-image: url('https://demo.iacpatterns.com/docsgarage/wp-content/uploads/sites/117/2024/01/cheerful-smiling-muslim-lady-driving-her-new-car-5QC2D6S-1.jpg');
+  background-position: center;
+  background-origin: center;
+  background-size: cover;
+}
+.section-video-dark {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.section-card-light {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.section-image {
+   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
