@@ -10,6 +10,7 @@ import { IoMdClose } from 'react-icons/io';
 import { RootState } from '../../store/store';
 import { useSelector } from 'react-redux';
 
+
 import SideCartShop from '../../components/SideCartShop';
 const Header = () => {
   const counter = useSelector((state: RootState) => state.products.counter);
@@ -83,7 +84,7 @@ const Header = () => {
             }`}
           >
             {isOpen && (
-              <div className='w-[240px] md:w-[310px] lg:w-[330px] xl:w-[360px] h-screen fixed bg-light-second-color z-[3000] right-0 top-0 flex flex-col gap-y-6 ease-in-out duration-1000'>
+              <div className='w-[240px] md:w-[310px] lg:w-[330px] xl:w-[360px] h-screen fixed bg-light-second-color z-[3000] right-0 top-0 flex flex-col gap-y-6 ease-in-out duration-1000 '>
                 <div className='w-full py-2 px-3   flex justify-end items-center'>
                   <IoMdClose
                     className='text-[1.6rem] text-gray-text-second'
@@ -93,14 +94,14 @@ const Header = () => {
                     }}
                   />
                 </div>
-                <div className='flex flex-col gap-4 px-4 '>
+                <div className='flex flex-col gap-4 px-4    '>
                   {counter === 0 ? (
                     <div className='px-1 text-gray-600 font-extralight'>
                       No products in cart.
                     </div>
                   ) : (
-                    <div className=''>
-                      <div className=''>
+                    <div className='fixed h-screen '>
+                      <div className='min-h-[10vh] max-h-[76vh] overflow-auto pr-2'>
                         {allProducts.map((products, index) => (
                           <SideCartShop
                             key={index}
@@ -110,7 +111,7 @@ const Header = () => {
                           />
                         ))}
                       </div>
-                      <div className='mt-6 flex items-center justify-between'>
+                      <div className='flex items-center justify-between bg-white py-6  border-b border-t border-gray-300 mt-4'>
                         <p className='text-sm font-medium text-gray-900'>
                           Total
                         </p>

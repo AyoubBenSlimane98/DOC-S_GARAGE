@@ -1,4 +1,5 @@
- 
+ import { motion } from 'framer-motion';
+ import { fadeIn } from '../components/variants.ts';
 import { ProductProps } from '../data/Proudct.ts';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -10,14 +11,22 @@ type ProduitShopProps = {
   handleClose: () => void;
   handleClick: () => void;
 };
+
 const SideCartShop = ({
   products,
   handleClose,
   handleClick,
 }: ProduitShopProps) => {
   const dispatch = useDispatch();
+  
   return (
-    <div className='flex flex-col  py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0 border-b border-gray-300'>
+    <motion.div
+      className='flex flex-col  py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0 border-b border-gray-300'
+      variants={fadeIn({ direction: 'up', delay: 0.25, value: 20 })}
+      initial='hidden'
+      whileInView={'show'}
+      viewport={{ once: true, amount: 0 }}
+    >
       <NavLink
         className='shrink-0 relative'
         to={`/product/${products.product.title}`}
@@ -76,9 +85,8 @@ const SideCartShop = ({
             </svg>
           </button>
         </div>
-        
       </div>
-    </div>
+    </motion.div>
   );
 };
 
