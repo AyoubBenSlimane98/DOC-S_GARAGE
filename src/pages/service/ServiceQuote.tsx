@@ -13,7 +13,7 @@ const services = {
 };
 const ServiceQuote = () => {
   return (
-    <main>
+    <main className=' overflow-hidden'>
       <ImagePage {...services} />
 
       <section className=' grid grid-cols-1 gap-8 p-4'>
